@@ -277,22 +277,76 @@ p:last-child {
 /* Hero */
 .hero {
   padding: var(--space-xl) 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xl);
+}
+
+.hero-text {
   text-align: center;
 }
 
 .hero .lead {
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   max-width: 36em;
   margin-left: auto;
   margin-right: auto;
 }
 
-.hero-buttons {
+.hero-text .lead:last-of-type {
+  margin-bottom: var(--space-lg);
+}
+
+.hero-media {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-sm);
-  justify-content: center;
-  margin-top: var(--space-lg);
+  flex-direction: column;
+  align-items: center;
+  margin-top: var(--space-md);
+}
+
+/* Concept render card: frame for white-background image on dark site */
+.concept-render-card {
+  position: relative;
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: var(--space-md);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  width: 100%;
+  max-width: 420px;
+}
+
+.concept-render-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  background: #fff;
+}
+
+.concept-badge {
+  position: absolute;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.55);
+  color: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.concept-caption {
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin: var(--space-sm) 0 0;
+  max-width: 420px;
+  text-align: center;
 }
 
 /* Buttons */
