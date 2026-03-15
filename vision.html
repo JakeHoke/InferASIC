@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vision | InferASIC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="vision">
+  <div class="site-header-placeholder"></div>
+  <main class="page">
+    <section class="section">
+      <h1>Vision</h1>
+      <p class="lead">InferASIC explores hardware architectures designed specifically for large-scale AI inference workloads.</p>
+      <p>This page explains why the project exists and what thesis it is testing.</p>
+    </section>
+
+    <section class="section">
+      <h2>Why This Matters</h2>
+      <p>AI systems are shifting toward agent-driven and asynchronous modes of computation. Instead of humans initiating each request, autonomous systems increasingly generate, coordinate, and execute workloads on their own. That shift is already visible in research automation, software tooling, data pipelines, and enterprise workflows. As these systems mature, a growing share of AI compute may come from asynchronous agent workloads rather than direct, interactive human requests.</p>
+      <p>When that happens, the characteristics of compute demand change. Workloads become large volumes of independent inference requests, background processing, agent-to-agent calls, and orchestration across many jobs. Those workloads place different demands on infrastructure than traditional interactive AI.</p>
+    </section>
+
+    <section class="section">
+      <h2>Why Existing Infrastructure May Not Be Optimal</h2>
+      <p>Much of today's AI infrastructure is optimized for low-latency interactive use. GPUs are powerful and flexible, but they are built to serve a broad range of tasks: training, graphics, general-purpose compute, and inference. For large-scale inference, especially asynchronous workloads, the design priorities can differ.</p>
+      <p>Interactive, human-facing AI often needs sub-second response times. Infrastructure for that use case rightly prioritizes latency. For async and background inference, throughput, energy efficiency, cost per token, and cost per deployed accelerator can matter more than millisecond-level latency. InferASIC is exploring whether hardware designed specifically for inference can improve those metrics at scale. This is a thesis under active exploration through emulation and design, not a proven commercial result.</p>
+    </section>
+
+    <section class="section">
+      <h2>The Tradeoff: Latency Versus Efficiency</h2>
+      <p>One fundamental design tradeoff is latency. Architectures optimized for energy and cost may introduce different communication or batching patterns than systems built for minimal latency. For interactive applications, latency is often critical. For agent-driven and background workloads, modest increases in latency can be acceptable if they yield meaningful gains in energy efficiency, cost per token, and hardware cost per node.</p>
+      <p>InferASIC's design thesis is that for these async workloads, such a tradeoff is worth exploring. The project is testing that hypothesis through software emulation and architecture work before any hardware commitment.</p>
+    </section>
+
+    <section class="section">
+      <h2>Why InferASIC Is Exploring This Now</h2>
+      <p>InferASIC explores hardware architectures designed specifically for large-scale AI inference workloads. The central question is whether inference hardware can be designed for large-scale, often asynchronous workloads in a way that reduces the cost of operating those systems. The current design focus is independent card execution and self-contained inference per card; scale is being explored through deployment of many cards rather than distributed execution across cards. The goal is to validate the approach in emulation before pursuing physical hardware.</p>
+    </section>
+
+    <section class="section">
+      <h2>Current Stage</h2>
+      <p>The project is in concept, design, and software emulation. Work includes architecture exploration, emulation of the target pipeline, hardware feasibility evaluation, and runtime experimentation. These efforts are intended to test the underlying assumptions before any hardware implementation is pursued. There is no production hardware, no physical chip, and no launched product.</p>
+    </section>
+  </main>
+  <div class="site-footer-placeholder"></div>
+  <script src="js/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Architecture | InferASIC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="architecture">
+  <div class="site-header-placeholder"></div>
+  <main class="page">
+    <section class="section">
+      <h1>Architecture</h1>
+      <p class="lead">InferASIC explores hardware architectures designed specifically for large-scale AI inference workloads. This page describes the high-level approach. Implementation details are not disclosed.</p>
+    </section>
+
+    <section class="section">
+      <h2>The Problem</h2>
+      <p>Much inference infrastructure is built around large, general-purpose systems. Purpose-built inference hardware can target a narrower design space: efficient execution for inference workloads, with the ability to update the model. That shift in scope allows different tradeoffs in power, cost, and deployment.</p>
+    </section>
+
+    <section class="section">
+      <h2>InferASIC Approach</h2>
+      <p>The current architecture emphasizes inference-optimized transformer execution and self-contained execution on each card. Scale is being explored through deployment of many cards rather than distributed execution across cards. The work is conceptual and validated through software emulation, not silicon.</p>
+    </section>
+
+    <section class="section">
+      <h2>Design Principles</h2>
+      <div class="card-grid card-grid-2">
+        <div class="card">
+          <h3>Inference-first</h3>
+          <p>Optimize for the inference path. Training is out of scope. The architecture targets deployment efficiency, not training flexibility.</p>
+        </div>
+        <div class="card">
+          <h3>Modularity</h3>
+          <p>Card-based form factor for standard servers. Independent card execution allows scale by deploying more cards as needed.</p>
+        </div>
+        <div class="card">
+          <h3>Scalability</h3>
+          <p>Scale through many cards in the fleet rather than scaling up a single device. Each card contributes independent capacity.</p>
+        </div>
+        <div class="card">
+          <h3>Efficient deployment</h3>
+          <p>Target deployment in standard server infrastructure with efficient use of power and space.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="notice">
+      <strong>Current state.</strong> The architecture is being explored through software emulation and design work. No RTL or physical hardware exists. Details may change as the project evolves.
+    </div>
+  </main>
+  <div class="site-footer-placeholder"></div>
+  <script src="js/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>InferASIC | Hardware for large-scale AI inference</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body data-page="home">
+  <div class="site-header-placeholder"></div>
+  <main class="page">
+    <section class="hero">
+      <h1>InferASIC</h1>
+      <p class="lead">Exploring a new hardware architecture for large-scale AI inference.</p>
+      <p class="lead">Inference accelerator cards designed for efficient transformer execution. Early-stage project in design and emulation.</p>
+    </section>
+
+    <section class="section">
+      <h2>What InferASIC Is</h2>
+      <p>InferASIC explores hardware architectures designed specifically for large-scale AI inference workloads. The project is focused on inference accelerator cards: purpose-built hardware for transformer inference, with a current design emphasis on self-contained execution on each card. System scale is being explored through deployment of many cards rather than distributed execution across cards. Work today is in architecture exploration, software emulation, and design.</p>
+    </section>
+
+    <section class="section">
+      <h2>Why This Direction</h2>
+      <div class="card-grid card-grid-4">
+        <div class="card">
+          <h3>Hardware specialization</h3>
+          <p>Inference has different requirements than training. Dedicated inference hardware can target those workloads directly.</p>
+        </div>
+        <div class="card">
+          <h3>Independent card execution</h3>
+          <p>The current architecture emphasizes self-contained execution on each card. Models can be updated; the design is not locked to fixed silicon.</p>
+        </div>
+        <div class="card">
+          <h3>Inference focus</h3>
+          <p>Optimizing for the inference path rather than training simplifies the design space and aligns with deployment needs.</p>
+        </div>
+        <div class="card">
+          <h3>Early exploration</h3>
+          <p>Architecture and feasibility are being explored through emulation and design before any hardware commitment.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Current Focus</h2>
+      <ul class="bullet-list">
+        <li>Software emulation of the target pipeline and data flow</li>
+        <li>Architecture design and tradeoff analysis</li>
+        <li>Runtime and orchestration exploration</li>
+        <li>Hardware feasibility and technology path research</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <p class="lead">For the thesis behind the project, see <a href="vision.html" style="color: var(--accent);">Vision</a>. For development status and roadmap, <a href="status.html" style="color: var(--accent);">Status</a>. For technical or strategic inquiries, <a href="contact.html" style="color: var(--accent);">Contact</a>.</p>
+    </section>
+  </main>
+  <div class="site-footer-placeholder"></div>
+  <script src="js/components.js"></script>
+</body>
+</html>
